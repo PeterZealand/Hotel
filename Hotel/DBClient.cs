@@ -9,7 +9,7 @@ namespace Hotel
 {
     public class DBClient
     {
-        string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HotelDB2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Hotel;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         private int GetMaxFacilityID(SqlConnection connection)
         {
@@ -26,7 +26,7 @@ namespace Hotel
             //Assume undefined value 0 for max MaxFacility_ID
             int MaxFacility_ID = 0;
 
-            //Is there any rows in the query
+            //Are there any rows in the query
             if (reader.Read())
             {
                 //Yes, get max Facility_ID
